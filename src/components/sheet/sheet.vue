@@ -1,6 +1,6 @@
 <template>
 	<div class="sheet-box">
-		<div class="sheet-item" v-for="item in songSheet">
+		<div class="sheet-item" v-for="item in songSheet" @click="toListInfo">
 			<img class="sheet-img" :src="item.sheetImgUrl">
 			<div class="sheet-info">
 				<span class="sheet-title">{{item.sheetTitle}}</span>
@@ -34,6 +34,11 @@ export default {
 				console.log(res);
 				this.songSheet = res.data.songSheet;
 			})
+		},
+
+		//跳转到歌单详情页
+		toListInfo() {
+			this.$router.push({ name: 'listInfo', query: {pageFlag: 2} });
 		}
 	}
 }
@@ -41,7 +46,7 @@ export default {
 
 <style lang="scss">
 	.sheet-box{
-		padding: 162px 0 0 30px;
+		padding-left: 30px;
 		height: 100%;
 		overflow: auto;
 		.sheet-item{

@@ -1,6 +1,11 @@
 <template>
 	<div class="rank-box">
-		<div class="rank-item" v-for="item in rankList">
+		<!-- <div class="rank-item" v-for="item in rankList">
+			<img class="rank-img" :src="item.rankPicUrl">
+			<span class="rank-title">{{item.rankName}}</span>
+			<span class="arrow-right"></span>
+		</div> -->
+		<div class="rank-item" v-for="item in rankList" @click="toListInfo" :id="item.id">
 			<img class="rank-img" :src="item.rankPicUrl">
 			<span class="rank-title">{{item.rankName}}</span>
 			<span class="arrow-right"></span>
@@ -28,6 +33,13 @@ export default {
 				console.log(res);
 				this.rankList = res.data.rankList;
 			})
+		},
+
+		//跳转到榜单详情页
+		toListInfo(e) {
+			let id = e.currentTarget.getAttribute('id');
+			console.log(e.currentTarget.getAttribute('id'));
+			this.$router.push({ name: 'listInfo', query: {id: id, pageFlag: 1} });
 		}
 	}
 }
@@ -35,7 +47,7 @@ export default {
 
 <style lang="scss">
 	.rank-box{
-		padding: 162px 0 0 30px;
+		padding-left: 30px;
 		height: 100%;
 		overflow: auto;
 		.rank-item{

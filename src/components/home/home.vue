@@ -1,21 +1,16 @@
 <template>
-  <div id="app">
-    <div class="top">
-      <head-link></head-link>
+  <div>
       <nav-link></nav-link>
-    </div>
       <router-view></router-view>
   </div>
 </template>
 
 <script>
-import headLink from '../header/header';
 import navLink from '../nav/nav';
 export default {
   name: 'home',
   components: {
     navLink,
-    headLink
   }
 }
 </script>

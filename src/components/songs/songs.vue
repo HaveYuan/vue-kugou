@@ -40,9 +40,6 @@
 </script>
 
 <style lang="scss" scoped>
-		.songs-box{
-			padding-top: 162px;
-		}
 		.song-list-box{
 			overflow: hidden;
 			padding-left: 26px;

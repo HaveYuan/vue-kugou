@@ -23,6 +23,7 @@
 					el: '.swiper-pagination',
 					clickable: true
 				},
+				loop: true,
 				speed: 600,
 				autoplay: {
 					delay: 4000,
@@ -37,7 +38,7 @@
 	.swiper-container {
 	    width: 100%;
 	    height: 300px;
-	    margin-top: 12px;
+	    margin-top: 12px !important;
 	    .swiper-wrapper {
 	        width: 100%;
 	        height: 100%;

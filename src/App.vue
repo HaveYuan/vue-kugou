@@ -1,10 +1,18 @@
 <template>
-    <router-view></router-view>
+    <div id="app">
+       <head-link></head-link>
+       <router-view></router-view> 
+    </div>
 </template>
 
 <script>
+    import headLink from './components/header/header';
+
     export default {
         name: 'App',
+        components: {
+            headLink
+        }
     }
 </script>
 

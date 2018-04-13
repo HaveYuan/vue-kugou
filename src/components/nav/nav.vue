@@ -19,7 +19,7 @@
 		width: 100%;
 		height: 68px;
 		background: #fff;
-		box-shadow: 0 0.1785rem 0.1785rem 0 #f4f4f4;
+		box-shadow: 0 12px 12px 0 #f4f4f4;
 		padding: 0 14px;
 		box-sizing: border-box;
 		a{

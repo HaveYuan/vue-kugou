@@ -9,10 +9,6 @@
   			</a>
   		</li>
   	</ul>
-  	<router-link replace to="HelloWorld">
-  		123456
-  	</router-link>
-  	<!-- <router-view><router-view> -->
   </div>
 </template>
 
@@ -42,7 +38,6 @@ export default {
 
 <style lang="scss">
 	.bd{
-		padding-top: 162px;
 		height: 100%;
 		overflow: auto;
 	}
