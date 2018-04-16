@@ -22,6 +22,9 @@
 		box-shadow: 0 12px 12px 0 #f4f4f4;
 		padding: 0 14px;
 		box-sizing: border-box;
+		position: fixed;
+		top: 94px;
+		z-index: 1;
 		a{
 			display: block;
 			float: left;

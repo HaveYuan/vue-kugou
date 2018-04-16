@@ -17,10 +17,12 @@
 				id: '这是默认参数'
 			}
 		},
+
 		components: {
 			home,
 			songList
 		},
+
 		mounted: function(){
 			this.getData();
 			let id = this.$route.params.id2;
@@ -28,6 +30,7 @@
 				this.id = id;
 			}
 		},
+		
 		methods: {
 			getData() {
 				this.$ajax.get('https://www.easy-mock.com/mock/5ac9c65cc566697def6c0d41/kougou/songlist')

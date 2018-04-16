@@ -2,7 +2,7 @@
 
   <div class="bd">
   	<ul class="singer-class-list" v-for="item in singerClass">
-  		<li v-for="name in item.name">
+  		<li v-for="name in item.name" @click="toSingerList">
   			<a href="#">
   				{{name.name}}
   				<i class="arrow-icon"></i>
@@ -19,6 +19,7 @@ export default {
 			singerClass: []
 		}
 	},
+	
 	mounted: function() {
 		this.getSingerClass();
 	},
@@ -31,6 +32,11 @@ export default {
 				console.log(res);
 				this.singerClass = res.data.singerClass;
 			})
+		},
+
+		//跳转到歌手列表
+		toSingerList() {
+			this.$router.push({ name: 'singerList' });
 		}
 	}
 }
@@ -40,6 +46,7 @@ export default {
 	.bd{
 		height: 100%;
 		overflow: auto;
+		margin-top: 162px;
 	}
 	.singer-class-list{
 		margin: 28px 20px 25px;

@@ -17,7 +17,9 @@ export default {
 		width: 100%;
 		line-height: 94px;
 		background: #2ca2f9;
-		position: relative;
+		position: fixed;
+		top: 0;
+		z-index: 1;
 		.logo{
 			display: inline-block;
 			width: 204px;

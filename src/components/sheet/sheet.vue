@@ -49,6 +49,7 @@ export default {
 		padding-left: 30px;
 		height: 100%;
 		overflow: auto;
+		margin-top: 162px;
 		.sheet-item{
 			padding: 28px 58px 28px 226px;
 			border-bottom: 1px solid #ccc;

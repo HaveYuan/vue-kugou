@@ -38,7 +38,7 @@
 	.swiper-container {
 	    width: 100%;
 	    height: 300px;
-	    margin-top: 12px !important;
+	    margin-top: 174px !important;
 	    .swiper-wrapper {
 	        width: 100%;
 	        height: 100%;

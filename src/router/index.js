@@ -7,6 +7,7 @@ import sheet from '@/components/sheet/sheet'
 import singer from '@/components/singer/singer'
 import home from '@/components/home/home'
 import listInfo from '@/components/listInfo/listInfo'
+import singerList from '@/components/singerList/singerList'
 
 Vue.use(Router)
 
@@ -45,13 +46,17 @@ export default new Router({
                 name: 'singer',
                 component: singer
             }
-
         ]
     },
     {
         path: '/listInfo',
         name: 'listInfo',
         component: listInfo
+    },
+    {
+        path: '/singerList',
+        name: 'singerList',
+        component: singerList
     },
     {
         path: '/hi',

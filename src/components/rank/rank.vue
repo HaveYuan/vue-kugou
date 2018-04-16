@@ -50,6 +50,7 @@ export default {
 		padding-left: 30px;
 		height: 100%;
 		overflow: auto;
+		margin-top: 162px;
 		.rank-item{
 			height: 190px;
 			padding: 28px 58px 28px 226px;
