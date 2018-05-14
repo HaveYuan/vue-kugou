@@ -1,6 +1,6 @@
 <template>
 	<div class="song-list-box">
-		<div class="song-item" v-for="item in songList">
+		<div class="song-item" v-for="item in songList" @click="playMusic" :data-id="item.id">
 			<span>{{item.songName}}-{{item.singer}}</span>
 			<div class="download">
 				<span class="down-icon"></span>
@@ -12,8 +12,14 @@
 <script>
 	export default {
 		name: 'songList',
-		props: ['songList']
+		props: ['songList'],
 
+		methods: {
+			playMusic(e) {
+				let id = e.currentTarget.getAttribute('data-id');
+				console.log(id);
+			}
+		}
 	}
 </script>
 
@@ -25,7 +31,7 @@
 			height: 80px;
 			line-height: 80px;
 			padding: 20px 66px 20px 0;
-			font-size: 28px;
+			font-size: 32px;
 			border-bottom: 1px solid #e5e5e5;
 			position: relative;
 			span{

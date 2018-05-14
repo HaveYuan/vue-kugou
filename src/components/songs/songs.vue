@@ -3,12 +3,14 @@
 		<home></home>
 		<song-list :songList="songList"></song-list>
 		<div>12	{{id}}</div>
+		<play-box></play-box>
 	</div>
 </template>
 
 <script>
 	import home from '../swiper/home/home';
 	import songList from '../songList/songList';
+	import playBox from '../playBox/playBox';
 
 	export default{
 		data() {
@@ -20,7 +22,8 @@
 
 		components: {
 			home,
-			songList
+			songList,
+			playBox
 		},
 
 		mounted: function(){
