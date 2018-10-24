@@ -6,16 +6,30 @@
 				<span class="down-icon"></span>
 			</div>
 		</div>
+		<play-box :isShow="isShow"></play-box>
 	</div>
 </template>
 
 <script>
+	import playBox from '../playBox/playBox';
+
 	export default {
 		name: 'songList',
 		props: ['songList'],
 
+		data() {
+			return {
+				isShow: false           //是否显示
+			}
+		},
+
+		components: {
+			playBox
+		},
+
 		methods: {
 			playMusic(e) {
+				this.isShow = true;
 				let id = e.currentTarget.getAttribute('data-id');
 				console.log(id);
 			}

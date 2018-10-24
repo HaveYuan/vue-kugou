@@ -1,6 +1,6 @@
 <template>
 	<div class="nav">
-		<router-link replace exact :to="{name:'songs',params:{id2:'草尼马'}}">新歌</router-link>
+		<router-link replace exact :to="{name:'songs',params:{id2:'改变了默认参数'}}">新歌</router-link>
 		<router-link replace to="rank">排行</router-link>
 		<router-link replace to="sheet">歌单</router-link>
 		<router-link replace to="singer">歌手</router-link>
@@ -24,7 +24,7 @@
 		box-sizing: border-box;
 		position: fixed;
 		top: 94px;
-		z-index: 1;
+		z-index: 99;
 		a{
 			display: block;
 			float: left;

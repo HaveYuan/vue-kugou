@@ -46,7 +46,7 @@
 
 			//跳转到歌曲列表
 			toListInfo() {
-				this.$router.push({ name: 'listInfo', query: {pageFlag: 3, } });
+				this.$router.push({ name: 'listInfo', query: {pageFlag: 3 } });
 			}
 		}
 	}

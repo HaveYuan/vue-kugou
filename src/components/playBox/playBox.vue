@@ -1,5 +1,5 @@
 <template>
-	<div class="play-box">
+	<div class="play-box" v-if="isShow == true">
 		<a href="#" class="p-l">
 			<div class="p-l-l">
 				<img src="../../assets/images/head.jpg">
@@ -10,7 +10,7 @@
 			</div>
 		</a>
 		<div class="p-r">
-			<i class="btn-status" :class="status == true?'btn_pause':'btn_play'" @click="changeStatus"></i>
+			<i class="btn-status" :class="playStatus == true?'btn_pause':'btn_play'" @click="changeStatus"></i>
 			<i class="btn-status btn_next"></i>
 			<i class="btn-status btn_download"></i>
 			<!-- <audio src="http://up.mcyt.net/?down/46496.mp3" autoplay="autoplay"></audio> -->
@@ -20,9 +20,10 @@
 
 <script>
 	export default {
+		props: ['isShow'],
 		data() {
 			return {
-				status: true
+				playStatus: true
 			}
 		},
 		mounted: function(){
@@ -30,12 +31,12 @@
 		},
 		methods: {
 			//改变播放状态
-			changeStatus: function() {
-				console.log(status);
-				if(this.status == true) {
-					this.status = false;
+			changeStatus() {
+				console.log(this.playStatus);
+				if(this.playStatus == true) {
+					this.playStatus = false;
 				}else {
-					this.status = true;
+					this.playStatus = true;
 				}
 			}
 		}
@@ -49,6 +50,7 @@
 		background: rgba(0,0,0,.9);
 		position: fixed;
 		bottom: 0;
+		left: 0;
 		z-index: 10;
 		.p-l{
 			width: 65%;

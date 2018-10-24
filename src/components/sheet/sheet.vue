@@ -89,7 +89,7 @@ export default {
 			margin-bottom: 6px;
 		}
 		.num-box{
-			font-size: 14px;
+			font-size: 22px;
 			color: #9b9b9b;
 			.listen-num{
 				width: 20px;
