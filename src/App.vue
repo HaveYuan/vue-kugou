@@ -1,7 +1,10 @@
 <template>
     <div id="app">
        <head-link></head-link>
-       <router-view></router-view> 
+       <keep-alive>
+          <router-view></router-view>
+       </keep-alive>
+
     </div>
 </template>
 
@@ -14,6 +17,7 @@
             headLink
         }
     }
+    
 </script>
 
 <style lang="scss">

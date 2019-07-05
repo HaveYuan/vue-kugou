@@ -5,6 +5,10 @@
 			<span class="rank-title">{{item.rankName}}</span>
 			<span class="arrow-right"></span>
 		</div> -->
+		{{$store.state.count}}
+		<button @click="add(1)">点击加</button>
+		<button @click="jian(1)">点击减</button>
+		<button @click="Init();">点击归零</button>
 		<div class="rank-item" v-for="item in rankList" @click="toListInfo" :id="item.id">
 			<img class="rank-img" :src="item.rankPicUrl">
 			<span class="rank-title">{{item.rankName}}</span>
@@ -21,16 +25,35 @@ export default {
 		}
 	},
 	mounted: function() {
+		// console.log(this.rankList)
 		this.getRank();
 	},
 
+	activated() {//每次激活时，相当于小程序的onshow
+		console.log("actived")
+		
+	},
+
 	methods:{
+
+		add(n) {
+			console.log(this.$store.getters.getterCount)
+			this.$store.dispatch('actionsAddCount',n)
+		},
+
+		jian(n) {
+			this.$store.dispatch('actionsReduceCount',n)
+		},
+
+		Init() {
+			this.$store.dispatch('actionsInitCount');
+		},
 
 		//获取音乐榜信息
 		getRank() {
 			this.$ajax.get('https://www.easy-mock.com/mock/5ac9c65cc566697def6c0d41/kougou/rankList')
 			.then(res => {
-				console.log(res);
+				// console.log(res);
 				this.rankList = res.data.rankList;
 			})
 		},

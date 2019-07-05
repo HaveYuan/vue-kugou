@@ -3,6 +3,7 @@
 		<home></home>
 		<song-list :songList="songList"></song-list>
 		<div>12	{{id}}</div>
+		{{$store.state.count}}
 	</div>
 </template>
 

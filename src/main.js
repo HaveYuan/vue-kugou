@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import 'lib-flexible'
 import axios from 'axios'
+import store from './vuex/store'
 
 Vue.prototype.$ajax = axios
 
@@ -14,6 +15,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

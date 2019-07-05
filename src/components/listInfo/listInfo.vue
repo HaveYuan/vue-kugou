@@ -55,15 +55,16 @@
 			//返回
 			reBack() {
 				let flag = this.pageFlag;
-				if(flag == 1) {
-					this.$router.push( {name: 'rank'} );
-				}else if(flag == 2) {
-					this.$router.push( {name: 'sheet'} );
-				}else if(flag == 3) {
-					this.$router.push( {name: 'singerList'} );
-				}else {
-					this.$router.push( {name: 'songs'} );
-				}
+				this.$router.go(-1);
+				// if(flag == 1) {
+				// 	this.$router.push( {name: 'rank'} );
+				// }else if(flag == 2) {
+				// 	this.$router.push( {name: 'sheet'} );
+				// }else if(flag == 3) {
+				// 	this.$router.push( {name: 'singerList'} );
+				// }else {
+				// 	this.$router.push( {name: 'songs'} );
+				// }
 			},
 
 			//展开信息
