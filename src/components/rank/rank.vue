@@ -6,9 +6,9 @@
 			<span class="arrow-right"></span>
 		</div> -->
 		{{$store.state.count}}
-		<button @click="add(1)">点击加</button>
-		<button @click="jian(1)">点击减</button>
-		<button @click="Init();">点击归零</button>
+		<button @click="add(1)">点击-加</button>
+		<button @click="jian(1)">点击-减</button>
+		<button @click="Init();">点击-归零</button>
 		<div class="rank-item" v-for="item in rankList" @click="toListInfo" :id="item.id">
 			<img class="rank-img" :src="item.rankPicUrl">
 			<span class="rank-title">{{item.rankName}}</span>
